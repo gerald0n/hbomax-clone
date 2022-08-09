@@ -27,7 +27,6 @@
 html,
 body {
     min-height: 100%;
-    font-size: 1.6rem;
     color: var(--secundary-color);
 
     display: flex;
@@ -73,6 +72,7 @@ body {
 
 .menu-section {
     display: flex;
+    align-items:center;
 }
 
 #menu-icon svg path {
@@ -84,7 +84,7 @@ body {
 .menu-section a {
     color: var(--primary-color);
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: 0.6rem 1.2rem;
 }
 
@@ -117,14 +117,14 @@ body {
 }
 
 .main .form {
-    width: 75%;
+    width: 60%;
     height: 50rem;
     background-color: var(--bg-color-form);
     border-radius: 0.8rem;
 
     display: flex;
     flex-direction: column;
-    padding: 3.6rem;
+    padding: 6rem;
 }
 
 .form p {
