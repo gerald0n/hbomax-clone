@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', Verdana, sans-serif, sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --primary-color: rgba(255, 255, 255, 0.7);
+    --secundary-color: rgb(255, 255, 255);
+    --bg-color-form: rgba(221, 221, 221, 0.06);
+    --bg-color-button-login: rgba(255, 255, 255, 0.05);
+    --bg-color-button-sign: rgba(255, 255, 255, 0.12);
+    --bg-color-button-provider: rgba(62, 59, 68, 0.7);
+    --bg-color-button-hover: rgba(15, 15, 15, 0.98);
+    --border-color: rgb(117, 62, 239);
+    /* border-width: 2px; border-radius: 4px; */
+    --link-color: rgb(145, 129, 248);
+    --input-bg-color: rgba(0, 0, 0, 0.2);
+    --input-border-color: rgba(255, 255, 255, 0.4);
+    --line-color: rgba(255, 255, 255, 0.3);
+}
+
+html,
+body {
+    min-height: 100%;
+    font-size: 1.6rem;
+    color: var(--secundary-color);
+
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    
+    background-image: url(/assets/images/background-111.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* NAVIGATION */
+
+.navigation-menu {
+    width: 100%;
+    height: 8rem;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.2rem 3.6rem;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5) 0.48%,
+        rgba(0, 0, 0, 0.47) 3.73%,
+        rgba(0, 0, 0, 0.443) 6.67%,
+        rgba(0, 0, 0, 0.424) 9.29%,
+        rgba(0, 0, 0, 0.404) 11.98%,
+        rgba(0, 0, 0, 0.384) 14.88%,
+        rgba(0, 0, 0, 0.37) 18.18%,
+        rgba(0, 0, 0, 0.34) 25%,
+        rgba(0, 0, 0, 0.32) 32.4%,
+        rgba(0, 0, 0, 0.28) 39.23%,
+        rgba(0, 0, 0, 0.24) 47.42%,
+        rgba(0, 0, 0, 0.2) 57.17%,
+        rgba(0, 0, 0, 0.12) 68.67%,
+        rgba(0, 0, 0, 0.06) 82.12%,
+        rgba(0, 0, 0, 0) 97.71%
+    );
+}
+
+.menu-section {
+    display: flex;
+}
+
+#menu-icon svg path {
+    fill: var(--primary-color);
+    stroke-width: 3px;
+    stroke: var(--primary-color);
+}
+
+.menu-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 0.6rem 1.2rem;
+}
+
+#logo-hbo svg path {
+    fill: var(--secundary-color);
+    stroke: var(--secundary-color);
+}
+
+#search-icon svg path {
+    stroke: var(--primary-color);
+    stroke-width: 4px;
+}
+
+/* END NAVIGATION */
+
+/* MAIN */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+}
+
+.main h2 {
+    margin-top: 2.8rem;
+    margin-bottom: 2.4rem;
+    font-size: 2.4rem;
+    color: var(--secundary-color);
+}
+
+.main .form {
+    width: 75%;
+    height: 50rem;
+    background-color: var(--bg-color-form);
+    border-radius: 0.8rem;
+
+    display: flex;
+    flex-direction: column;
+    padding: 3.6rem;
+}
+
+.form p {
+    font-size: 1.4rem;
+}
+
+input {
+    height: 5.6rem;
+    border: 0px solid black;
+    border-color: var(--input-border-color);
+    border-width: 0.5px;
+    border-radius: 0.4rem;
+    padding-left: 1.2rem; 
+    background-color: var(--input-bg-color);
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    color: var(--secundary-color);
+}
+
+  .form input[type=""] {
+    margin-bottom: 2rem;
+    background-image: url(/assets/images/icons/view-icon.png);
+    background-repeat: no-repeat;
+    background-position: 98.5%;
+    background-size: 1.3em;
+  }
+
+  .login button {
+    margin-right: 3.2rem;
+    background-color: var(--bg-color-button-login);
+    margin-top: 2rem;
+  }
+
+  .wrapper button{
+    padding-bottom: 1.2rem;
+    padding-top: 1.1rem;
+    padding-inline: 2rem;
+
+    min-width: 14.4rem;
+    min-height: 4.4rem;
+
+    border-width: 0.2rem;
+    border-radius: 0.4rem;
+
+    font-weight: 600;
+    border-color: rgba(0,0,0,0);
+    color: var(--secundary-color);
+  }
+
+  .login-provider button {
+    background-color: var(--bg-color-button-provider);
+}
+
+  .login button:enabled{
+    cursor: pointer;
+  }
+
+.login a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--link-color);
+}
+
+.line-or {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.line-or span {
+    margin-inline: 2rem;
+    color: var(--secundary-color);
+    font-weight: 600;
+}
+
+.line-or hr {
+    border-color: var(--line-color);
+    margin-block: 3.2rem;
+}
+
+.login-provider p {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+
+
