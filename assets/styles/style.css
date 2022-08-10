@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'DM Sans', Verdana, sans-serif, sans-serif;
+    font-family: sans-serif, sans-serif;
 }
 
 :root {
-    font-size: 62.5%;
+    font-size: 50%;
     --primary-color: rgba(255, 255, 255, 0.7);
     --secundary-color: rgb(255, 255, 255);
     --bg-color-form: rgba(221, 221, 221, 0.06);
@@ -28,29 +26,33 @@ html,
 body {
     min-height: 100%;
     color: var(--secundary-color);
-
-    display: flex;
-    flex-direction: column;
+    font-size: 1.6rem;
 }
 
 body {
-    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-image: url(/assets/images/background-111.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* NAVIGATION */
 
 .navigation-menu {
-    width: 100%;
-    height: 8rem;
+    min-width: 100%;
+    height: 8.5rem;
+    padding-inline: 5.4rem;
     position: fixed;
-    z-index: 10;
+    
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.2rem 3.6rem;
+    
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5) 0.48%,
         rgba(0, 0, 0, 0.47) 3.73%,
@@ -71,8 +73,20 @@ body {
 }
 
 .menu-section {
+    width: max-content;
     display: flex;
-    align-items:center;
+    align-items: center;
+    height: 3.6rem;
+    gap: 10px;
+}
+
+
+.menu-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
 }
 
 #menu-icon svg path {
@@ -81,11 +95,10 @@ body {
     stroke: var(--primary-color);
 }
 
-.menu-section a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 1.6rem;
-    padding: 0.6rem 1.2rem;
+#menu-icon:hover svg path {
+    fill: var(--secundary-color);
+    stroke-width: 3px;
+    stroke: var(--secundary-color);
 }
 
 #logo-hbo svg path {
@@ -97,6 +110,13 @@ body {
     stroke: var(--primary-color);
     stroke-width: 4px;
 }
+
+#search-icon:hover svg path {
+    stroke: var(--secundary-color);
+    stroke-width: 4px;
+}
+
+
 
 /* END NAVIGATION */
 
@@ -112,26 +132,26 @@ body {
 .main h2 {
     margin-top: 2.8rem;
     margin-bottom: 2.4rem;
-    font-size: 2.4rem;
+    font-size: 3rem;
     color: var(--secundary-color);
 }
 
 .main .form {
-    width: 60%;
-    height: 50rem;
+    height: 56.8rem;
+    width: 62%;
     background-color: var(--bg-color-form);
     border-radius: 0.8rem;
-
     display: flex;
     flex-direction: column;
     padding: 6rem;
 }
 
 .form p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
-input {
+input[type="text"], input[type=""] {
+    width: 100%;
     height: 5.6rem;
     border: 0px solid black;
     border-color: var(--input-border-color);
@@ -152,13 +172,37 @@ input {
     background-size: 1.3em;
   }
 
+  .login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
   .login button {
-    margin-right: 3.2rem;
     background-color: var(--bg-color-button-login);
-    margin-top: 2rem;
+  }
+
+  #checkbox {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .login label {
+    color: var(--primary-color);
+  }
+
+  input[type="checkbox"] {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.6rem;
+    
   }
 
   .wrapper button{
+    width: max-content;
     padding-bottom: 1.2rem;
     padding-top: 1.1rem;
     padding-inline: 2rem;
@@ -169,13 +213,28 @@ input {
     border-width: 0.2rem;
     border-radius: 0.4rem;
 
+    font-size: 1.4rem;
     font-weight: 600;
     border-color: rgba(0,0,0,0);
     color: var(--secundary-color);
+    
   }
 
   .login-provider button {
     background-color: var(--bg-color-button-provider);
+}
+
+.login-provider button:hover, .login button:hover {
+    background-color: var(--bg-color-button-hover);
+    border-color: var(--border-color);
+    border: 1px solid var(--border-color);
+    /* border-width: 0.5px; */
+}
+
+.login-provider {
+    display: flex;
+    flex-direction: column;
+
 }
 
   .login button:enabled{
@@ -183,8 +242,10 @@ input {
   }
 
 .login a {
+    width: 50%;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    text-align: right;
     color: var(--link-color);
 }
 
@@ -210,5 +271,46 @@ input {
     color: var(--primary-color);
 }
 
+footer a {
+    display: flex;
+    width: 62%;
+    margin-inline: auto;
+    justify-content: center;
+    height: max-content;
+    margin-block: 4rem;
+    color: var(--link-color);
+    text-decoration:none;
+    font-weight: 600;
+}
 
+footer a:hover {
+    text-decoration: underline;
+}
 
+#sign {
+    background-color: var(--bg-color-button-sign);
+    font-size: 1.6rem;
+    padding-inline: 1.4rem;
+    padding-block: 1rem;
+    line-height: 2.1rem;
+    border-width: 0.2rem;
+    border-radius: 0.4rem;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+#sign:hover {
+    background-color: var(--secundary-color);
+    color: rgb(0,0,0);
+}
+
+.menu-section a:hover {
+    color: var(--secundary-color);
+}
+
+#login {
+    color: var(--secundary-color);
+}
+
+#recovery-pass:hover {
+    color: rgb(116, 68, 218);
+}
